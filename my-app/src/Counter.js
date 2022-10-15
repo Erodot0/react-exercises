@@ -1,4 +1,5 @@
 import React from "react";
+import { ClickTracker } from "./ClickTracker";
 import { ClickCounter } from "./ClickCounter";
 import { CounterDisplay } from "./CounterDisplay";
 
@@ -20,6 +21,7 @@ export class Counter extends React.Component {
         return <div>
             <CounterDisplay count={this.state.count} />
             <ClickCounter  count={this.state.count} />
+            <ClickTracker/>
         </div>
     }
 }
