@@ -3,6 +3,7 @@ import { Counter } from "./Counter";
 import { HelloWorld } from "./HelloWorld";
 import { Welcome } from "./Welcome";
 import { InteractiveWelcome } from "./InteractiveWelcome";
+import { Login } from "./Login";
 
 export class App extends React.Component {
     render() {
@@ -11,7 +12,8 @@ export class App extends React.Component {
                 {/* <HelloWorld /> */}
                 {/* <Welcome name="john" age="12"/> */}
                 {/* <Counter initialValue={0} incrementAmount={1} incrementInterval={1000}/> */}
-                <InteractiveWelcome />
+                {/* <InteractiveWelcome /> */}
+                <Login />
             </div>
         )
     }
