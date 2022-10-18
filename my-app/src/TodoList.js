@@ -18,12 +18,20 @@ export class TodoList extends React.Component {
             inputValue: ""
         })
     }
+
+    handleClearArray = () => {
+        this.setState({
+            name: [],
+            inputValue: ""
+        })
+    }
     render(){
         return(
             <div>
             <form>
                 <input name="inputData" type="text" onChange={this.handleInputChange} value={this.state.inputValue}/>
-                <button type="reset" onClick={this.handleBtnClick} disabled={!this.state.inputValue}>Send</button>
+                <button type="button" onClick={this.handleBtnClick} disabled={!this.state.inputValue}>Send</button>
+                <button type="button" onClick={this.handleClearArray} >Clear</button>
             </form>
             <ul >
                 {this.state.name.map((name, index) => {
