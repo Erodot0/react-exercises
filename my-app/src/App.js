@@ -4,6 +4,7 @@ import { HelloWorld } from "./HelloWorld";
 import { Welcome } from "./Welcome";
 import { InteractiveWelcome } from "./InteractiveWelcome";
 import { Login } from "./Login";
+import { UncontrolledLogin } from "./UncontrolledLogin";
 
 export class App extends React.Component {
     render() {
@@ -13,7 +14,8 @@ export class App extends React.Component {
                 {/* <Welcome name="john" age="12"/> */}
                 {/* <Counter initialValue={0} incrementAmount={1} incrementInterval={1000}/> */}
                 {/* <InteractiveWelcome /> */}
-                <Login />
+                {/* <Login /> */}
+                <UncontrolledLogin />
             </div>
         )
     }
