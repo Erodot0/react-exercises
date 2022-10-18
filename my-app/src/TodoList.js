@@ -2,7 +2,7 @@ import React from "react";
 
 export class TodoList extends React.Component {
     state = {
-        name: ["davide","giacomo","giada","karim","sciuti"],
+        name: [],
         inputValue: ""
     }
 
@@ -25,6 +25,16 @@ export class TodoList extends React.Component {
             inputValue: ""
         })
     }
+
+    handleRemoveTodo = (toRemove)=>{
+        this.state.name.splice(toRemove,1)
+        this.setState((state) => {
+            return {
+                name: state.name 
+            }
+        })
+      }
+
     render(){
         return(
             <div>
@@ -35,7 +45,7 @@ export class TodoList extends React.Component {
             </form>
             <ul >
                 {this.state.name.map((name, index) => {
-                    return <li key={name + index}>{name}</li>;
+                    return <li key={name + index}>{name}<button type='button' onClick={()=>{this.handleRemoveTodo(index)}} >Remove</button></li>;
                 })}
             </ul>                
             </div>
