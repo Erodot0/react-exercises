@@ -1,6 +1,12 @@
-import React from "react";
+import React, {createRef} from "react";
 
 export class UncontrolledLogin extends React.Component {
+    _userFocusRef = createRef()
+
+    componentDidMount(){
+        this._userFocusRef.current.focus()
+    }
+
     handleFormSubmit = (event) => {
         event.preventDefault()
 
@@ -15,9 +21,9 @@ export class UncontrolledLogin extends React.Component {
         return(
             <>
             <h3>Form</h3>
-
+            
             <form onSubmit={this.handleFormSubmit}>
-                <input type="text" name="username" />
+                <input ref={this._userFocusRef} /* otherwise we can simply use: autoFocus */ type="text" name="username"/>
                 <input type="password" name="password"/>
                 <input type="checkbox" name="remember"/>
 

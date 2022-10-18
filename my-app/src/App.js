@@ -1,9 +1,9 @@
 import React from "react";
-import { Counter } from "./Counter";
-import { HelloWorld } from "./HelloWorld";
-import { Welcome } from "./Welcome";
-import { InteractiveWelcome } from "./InteractiveWelcome";
-import { Login } from "./Login";
+// import { Counter } from "./Counter";
+// import { HelloWorld } from "./HelloWorld";
+// import { Welcome } from "./Welcome";
+// import { InteractiveWelcome } from "./InteractiveWelcome";
+// import { Login } from "./Login";
 import { UncontrolledLogin } from "./UncontrolledLogin";
 
 export class App extends React.Component {
