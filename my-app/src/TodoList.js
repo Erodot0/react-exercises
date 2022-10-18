@@ -1,25 +1,29 @@
-import React, {createRef} from "react";
+import React from "react";
 
 export class TodoList extends React.Component {
-    _inputDataRef = createRef()
-
     state = {
-        name: ["1","2","3"]
+        name: ["davide","giacomo","giada","karim","sciuti"],
+        inputValue: ""
     }
 
-    handleInputValue = () => {
-        const inputData = this._inputDataRef.current.value
-
+    handleInputChange = (event) => {
         this.setState({
-            name: [...this.state.name, inputData]
+            inputValue : event.target.value,
+        })
+    }
+
+    handleBtnClick = () => {
+        this.setState({
+            name: [...this.state.name, this.state.inputValue],
+            inputValue: ""
         })
     }
     render(){
         return(
             <div>
             <form>
-                <input name="inputData" type="text" ref={this._inputDataRef} />
-                <button type="button" onClick={this.handleInputValue}>Send</button>
+                <input name="inputData" type="text" onChange={this.handleInputChange} value={this.state.inputValue}/>
+                <button type="reset" onClick={this.handleBtnClick} disabled={!this.state.inputValue}>Send</button>
             </form>
             <ul >
                 {this.state.name.map((name, index) => {
