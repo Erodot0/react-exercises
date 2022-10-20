@@ -1,4 +1,5 @@
 import React from "react";
+import { Container } from "./Container";
 // import { Counter } from "./Counter";
 // import { HelloWorld } from "./HelloWorld";
 // import { Welcome } from "./Welcome";
@@ -15,9 +16,10 @@ export class App extends React.Component {
                 {/* <Welcome name="john" age="12"/> */}
                 {/* <Counter initialValue={0} incrementAmount={1} incrementInterval={1000}/> */}
                 {/* <InteractiveWelcome /> */}
-                <Login />
+                {/* <Login /> */}
                 {/* <UncontrolledLogin /> */}
                 {/* <TodoList /> */}
+                <Container title="A nice container"/>
             </div>
         )
     }

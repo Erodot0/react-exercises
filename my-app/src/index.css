@@ -3,6 +3,12 @@
     margin: 0;
 }
 
+body{
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+
 .welcome {
     background-color: black;
     color: white;
@@ -12,4 +18,19 @@
     font-size: 64px;
     border: 5px solid white;
     border-radius: 50px;
+}
+
+.container {
+    background-color: white;
+    border: rgb(125, 0, 0) solid 2px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.container-child {
+    background-color: rgb(255, 255, 255);
+    border: rgb(178, 0, 0) solid 2px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 5px;
 }
