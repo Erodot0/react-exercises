@@ -43,11 +43,7 @@ export class TodoList extends React.Component {
                 <button type="button" onClick={this.handleBtnClick} disabled={!this.state.inputValue}>Send</button>
                 <button type="button" onClick={this.handleClearArray} >Clear</button>
             </form>
-            <ul >
-                {this.state.name.map((name, index) => {
-                    return <li key={name + index}>{name}<button type='button' onClick={()=>{this.handleRemoveTodo(index)}} >Remove</button></li>;
-                })}
-            </ul>                
+            {this.props.render(this.state.name)}               
             </div>
 
         )

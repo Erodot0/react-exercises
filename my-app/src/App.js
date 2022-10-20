@@ -4,9 +4,9 @@ import { Container } from "./Container";
 // import { HelloWorld } from "./HelloWorld";
 // import { Welcome } from "./Welcome";
 // import { InteractiveWelcome } from "./InteractiveWelcome";
-import { Login } from "./Login";
+// import { Login } from "./Login";
 // import { UncontrolledLogin } from "./UncontrolledLogin";
-// import { TodoList } from "./TodoList";
+import { TodoList } from "./TodoList";
 
 export class App extends React.Component {
     render() {
@@ -18,8 +18,20 @@ export class App extends React.Component {
                 {/* <InteractiveWelcome /> */}
                 {/* <Login /> */}
                 {/* <UncontrolledLogin /> */}
-                {/* <TodoList /> */}
-                <Container title="A nice container"/>
+                <TodoList render={(name) => {
+                    return (
+                            <ul>
+                                {name.map((name, index) => <li key={name + index}>{name}
+                                    <button onClick={() => {
+                                        name.splice(index, 1);
+                                        this.setState({
+                                            name: name
+                                        });
+                                    }}>Remove</button></li>)}
+                            </ul>
+                    )
+                }} />
+                {/* <Container title="A nice container"/> */}
             </div>
         )
     }
