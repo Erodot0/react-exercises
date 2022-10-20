@@ -32,6 +32,11 @@ export class Login extends React.Component {
   };
 
   render() {
+    const myStyle = {
+      backgroundColor: this.state.password.length < 8 ? "red" : "green",
+      color: "white",
+      padding: "10px"
+    }
     return (
       <form>
 
@@ -69,6 +74,7 @@ export class Login extends React.Component {
           type="button"
           disabled={!(this.state.username && this.state.password)}
           onClick={this.handleLogin}
+          style={myStyle}
         >
           LogIn
         </button>
