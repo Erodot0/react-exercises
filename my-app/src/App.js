@@ -18,16 +18,11 @@ export class App extends React.Component {
                 {/* <InteractiveWelcome /> */}
                 {/* <Login /> */}
                 {/* <UncontrolledLogin /> */}
-                <TodoList render={(name) => {
+                <TodoList render={(name,remove) => {
                     return (
                             <ul>
                                 {name.map((name, index) => <li key={name + index}>{name}
-                                    <button onClick={() => {
-                                        name.splice(index, 1);
-                                        this.setState({
-                                            name: name
-                                        });
-                                    }}>Remove</button></li>)}
+                                    <button onClick={remove}>Remove</button></li>)}
                             </ul>
                     )
                 }} />

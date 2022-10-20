@@ -43,7 +43,7 @@ export class TodoList extends React.Component {
                 <button type="button" onClick={this.handleBtnClick} disabled={!this.state.inputValue}>Send</button>
                 <button type="button" onClick={this.handleClearArray} >Clear</button>
             </form>
-            {this.props.render(this.state.name)}               
+            {this.props.render(this.state.name,this.handleRemoveTodo)}               
             </div>
 
         )
