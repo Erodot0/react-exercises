@@ -1,10 +1,11 @@
 import React from "react";
+import { Sum } from "./Sum";
 // import { Container } from "./Container";
 // import { DisplayLanguage } from "./DisplayLanguage";
 // import { LanguageContext } from "./LanguageContext";
 // import { Counter } from "./Counter";
 // import { HelloWorld } from "./HelloWorld";
-import { Welcome } from "./Welcome";
+// import { Welcome } from "./Welcome";
 // import { InteractiveWelcome } from "./InteractiveWelcome";
 // import { Login } from "./Login";
 // import { UncontrolledLogin } from "./UncontrolledLogin";
@@ -33,7 +34,8 @@ export class App extends React.Component {
                     </LanguageContext.Provider>
                 </div> */}
                 {/* <HelloWorld /> */}
-                <Welcome name="john" age="12"/>
+                {/* <Welcome name="john" age="12"/> */}
+                <Sum numbers={[1,2,3,4,5,6]}/>
                 {/* <Counter initialValue={0} incrementAmount={1} incrementInterval={1000}/> */}
                 {/* <InteractiveWelcome /> */}
                 {/* <Login /> */}
