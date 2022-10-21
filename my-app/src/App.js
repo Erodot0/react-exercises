@@ -1,14 +1,14 @@
 import React from "react";
-import { Container } from "./Container";
-import { DisplayLanguage } from "./DisplayLanguage";
-import { LanguageContext } from "./LanguageContext";
+// import { Container } from "./Container";
+// import { DisplayLanguage } from "./DisplayLanguage";
+// import { LanguageContext } from "./LanguageContext";
 // import { Counter } from "./Counter";
 // import { HelloWorld } from "./HelloWorld";
-// import { Welcome } from "./Welcome";
+import { Welcome } from "./Welcome";
 // import { InteractiveWelcome } from "./InteractiveWelcome";
 // import { Login } from "./Login";
 // import { UncontrolledLogin } from "./UncontrolledLogin";
-import { TodoList } from "./TodoList";
+// import { TodoList } from "./TodoList";
 
 export class App extends React.Component {
     state = {
@@ -23,15 +23,17 @@ export class App extends React.Component {
     render() {
         return (
             <div>
-                <select value={this.state.language} onChange={this.handleLangChange}>
-                    <option value="en">English</option>
-                    <option value="it">Italian</option>
-                </select>
-                <LanguageContext.Provider value={this.state.language}>
-                    <DisplayLanguage/>
-                </LanguageContext.Provider>
+                {/* <div className="langselector">
+                    <select value={this.state.language} onChange={this.handleLangChange}>
+                        <option value="en">English</option>
+                        <option value="it">Italian</option>
+                    </select>
+                    <LanguageContext.Provider value={this.state.language}>
+                        <DisplayLanguage />
+                    </LanguageContext.Provider>
+                </div> */}
                 {/* <HelloWorld /> */}
-                {/* <Welcome name="john" age="12"/> */}
+                <Welcome name="john" age="12"/>
                 {/* <Counter initialValue={0} incrementAmount={1} incrementInterval={1000}/> */}
                 {/* <InteractiveWelcome /> */}
                 {/* <Login /> */}
