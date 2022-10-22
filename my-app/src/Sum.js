@@ -1,9 +1,9 @@
 import React from "react"
 
-export function Sum(props){
+export function Sum({numbers=[1,2,3]}){
     return(
         <h1>
-            {props.numbers.reduce((a,b) => a + b)}
+            {numbers.reduce((a,b) => a + b)}
         </h1>
     )
 }
