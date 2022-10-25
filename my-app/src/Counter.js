@@ -19,9 +19,9 @@ export class Counter extends React.Component {
     }
     render() {
         return <div>
-            <CounterDisplay count={this.state.count} />
-            <ClickCounter  count={this.state.count} />
-            <ClickTracker/>
+            {/* <CounterDisplay count={this.state.count} /> */}
+            <ClickCounter  initialValue={this.props.initialValue} count={this.state.count} />
+            {/* <ClickTracker/> */}
         </div>
     }
 }
