@@ -1,15 +1,16 @@
 import React from "react";
-// import { Sum } from "./Sum";
-// import { Container } from "./Container";
-// import { DisplayLanguage } from "./DisplayLanguage";
-// import { LanguageContext } from "./LanguageContext";
-import { Counter } from "./Counter";
-// import { HelloWorld } from "./HelloWorld";
-// import { Welcome } from "./Welcome";
-// import { InteractiveWelcome } from "./InteractiveWelcome";
-// import { Login } from "./Login";
-// import { UncontrolledLogin } from "./UncontrolledLogin";
-// import { TodoList } from "./TodoList";
+// import { Sum } from "./components/Sum";
+// import { Container } from "./components/Container";
+// import { DisplayLanguage } from "./components/DisplayLanguage";
+// import { LanguageContext } from "./components/LanguageContext";
+// import { Counter } from "./components/Counter";
+// import { HelloWorld } from "./components/HelloWorld";
+// import { Welcome } from "./components/Welcome";
+// import { InteractiveWelcome } from "./components/InteractiveWelcome";
+// import { Login } from "./components/Login";
+// import { UncontrolledLogin } from "./components/UncontrolledLogin";
+// import { TodoList } from "./components/TodoList";
+import { GithubUser } from "./components/GithubUser"
 
 export class App extends React.Component {
     state = {
@@ -36,7 +37,8 @@ export class App extends React.Component {
                 {/* <HelloWorld /> */}
                 {/* <Welcome name="john" age="12"/> */}
                 {/* <Sum numbers={[1,2,3,4,5,6]}/> */}
-                <Counter initialValue={0} incrementAmount={1} incrementInterval={1000}/>
+                {/* <Counter initialValue={0} incrementAmount={1} incrementInterval={1000}/> */}
+                <GithubUser username="Erodot0"/>
                 {/* <InteractiveWelcome /> */}
                 {/* <Login /> */}
                 {/* <UncontrolledLogin /> */}
