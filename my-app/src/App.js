@@ -10,7 +10,8 @@ import React from "react";
 // import { Login } from "./components/Login";
 // import { UncontrolledLogin } from "./components/UncontrolledLogin";
 // import { TodoList } from "./components/TodoList";
-import { GithubUser } from "./components/GithubUser"
+// import { GithubUser } from "./components/GithubUser"
+import { GithubUserList } from "./components/GithubUserList"
 
 export class App extends React.Component {
     state = {
@@ -38,7 +39,8 @@ export class App extends React.Component {
                 {/* <Welcome name="john" age="12"/> */}
                 {/* <Sum numbers={[1,2,3,4,5,6]}/> */}
                 {/* <Counter initialValue={0} incrementAmount={1} incrementInterval={1000}/> */}
-                <GithubUser username="Erodot0"/>
+                {/* <GithubUser username="Erodot0"/> */}
+                <GithubUserList />
                 {/* <InteractiveWelcome /> */}
                 {/* <Login /> */}
                 {/* <UncontrolledLogin /> */}
