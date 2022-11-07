@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 // import { ClickTracker } from "./ClickTracker";
-// import { ClickCounter } from "./ClickCounter";
-import { CounterDisplay } from "./CounterDisplay";
+import { ClickCounter } from "./ClickCounter";
+// import { CounterDisplay } from "./CounterDisplay";
 
 // export class Counter extends React.Component {
 //     state = {
@@ -47,8 +47,8 @@ export function Counter({initialValue = 0, incrementAmount = 1,incrementInterval
 
     return (
         <div>
-            <CounterDisplay count={counter} />
-            {/* <ClickCounter initialValue={initialValue} count={"initialValue"} /> */}
+            {/* <CounterDisplay count={counter} /> */}
+            <ClickCounter initialValue={initialValue} count={"initialValue"} />
             {/* <ClickTracker/> */}
         </div>
     )
