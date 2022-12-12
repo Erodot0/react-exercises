@@ -15,5 +15,7 @@ body {
     padding: 10px;
     border: darkred 5px solid;
     border-radius: 10px;
+    display: grid;
+    place-content: center;
 }
 
