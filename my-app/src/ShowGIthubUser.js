@@ -5,6 +5,6 @@ export function ShowGithubUser(){
     const {username} = useParams()
 
     return(
-        <GithubUser username={username} />
+        <GithubUser username={"Erodot0"} />
     )
 }
