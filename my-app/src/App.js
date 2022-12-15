@@ -14,10 +14,17 @@ export function App() {
         <Link to="/counter">counter</Link>
         <Link to="/user">User</Link>
       </nav>
+
       <Routes>
         <Route path="/" element={<Welcome name="janmanpreet" />} />
         <Route path="/counter" element={<Counter />} />
         <Route path="/user/:username" element={<ShowGithubUser />} />
+        <Route path="*" element={
+            <div>
+                <h2>Page not found</h2>
+                <Link to="/">Back to Home</Link>
+            </div>
+        }/>
       </Routes>
     </div>
   );
