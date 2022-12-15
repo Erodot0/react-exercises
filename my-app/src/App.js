@@ -1,14 +1,14 @@
-import "./index.css"
+import "./index.css";
 import React from "react";
-import { DisplayLanguage } from "./components/DisplayLanguage";
+import { Route, Routes } from "react-router-dom";
+import { Welcome } from "./components/Welcome";
 
-
-export class App extends React.Component {
-    render() {
-        return (
-            <div className="container">
-                <DisplayLanguage />
-            </div>
-        )
-    }
+export function App() {
+  return (
+    <div className="container">
+      <Routes>
+        <Route path="/" element={<Welcome name="janmanpreet" />} />
+      </Routes>
+    </div>
+  );
 }
